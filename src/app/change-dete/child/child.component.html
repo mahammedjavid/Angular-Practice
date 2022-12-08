@@ -1,0 +1,22 @@
+<div>
+    {{excuting()}}
+</div>
+<div class="row">
+    <div class="col">
+        <table class="table">
+            <tr>
+                <th>UserId</th>
+                <th>ID</th>
+                <th>Title</th>
+                <th>Completed</th>
+            </tr>
+            <tr *ngFor="let data of toChild">
+                <td>{{data.UserId}}</td>
+                <td>{{data.id}}</td>
+                <td>{{data.title}}</td>
+                <td>{{data.completed}}</td>
+            </tr>
+
+        </table>
+    </div>
+</div>

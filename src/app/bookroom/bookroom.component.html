@@ -1,0 +1,11 @@
+<p>bookroom works!</p>
+
+<!-- {{bookRoomForm | json}} -->
+
+<form [formGroup]="bookRoomForm" (ngSubmit)="formSubmit()">
+    <input type="text" placeholder="Enter your Name" formControlName="name">
+    <input type="text" placeholder="Enter Your Age" formControlName="age">
+    <input type="text" placeholder="Enter Your Place" formControlName="place">
+    <button type="button">Add Adress</button>
+    <button type="submit">Submit</button>
+</form>

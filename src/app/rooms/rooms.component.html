@@ -1,0 +1,13 @@
+<!-- <div class="container" -->
+<!-- <app-header></app-header>-->
+<app-header></app-header>
+<!-- <app-price></app-price> -->
+<button class="btn btn-success" (click)="addRoom()">Add Room</button>
+<div>
+    <form action="" [formGroup]="form">
+        <input type="text" formControlName="price">
+    </form>
+</div>
+<app-singleroom [room]="roomList" (selectedRoom)="getData($event)" [title]="title">
+</app-singleroom>
+<!-- </div> -->

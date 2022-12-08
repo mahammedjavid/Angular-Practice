@@ -1,0 +1,32 @@
+<!-- <app-price class="text-center"></app-price> -->
+
+<!-- <app-price></app-price> -->
+
+<table class="table text-center">
+    <thead>
+        <h4>{{title}}</h4>
+        <tr>
+            <th appHover>Even/Odd</th>
+            <th appHover>Room Number</th>
+            <th appHover>Room Type</th>
+            <th appHover>BHK</th>
+            <th appHover>Food</th>
+            <th appHover>Rent</th>
+            <th appHover>Ratings</th>
+            <th appHover>Action</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let rooms of room; let o=odd; let e=even;" [ngClass]="e ? 'even': 'odd'">
+            <td>{{o? "Odd": "Even"}}</td>
+            <td>{{rooms.roomNumber}}</td>
+            <td>{{rooms.type | uppercase}}</td>
+            <td>{{rooms.bhk}}</td>
+            <td>{{rooms.food | uppercase}}</td>
+            <td>{{rooms.rent | currency: 'INR'}}</td>
+            <td>{{rooms.rating | number:'1.0-0'}}</td>
+            <td><button class="btn btn-primary" (click)="shareToParent(rooms)">Select</button></td>
+            <td><button [routerLink]="['/single',rooms.roomNumber]">Show</button></td>
+        </tr>
+    </tbody>
+</table>

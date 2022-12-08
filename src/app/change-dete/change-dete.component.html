@@ -1,0 +1,14 @@
+<div>
+    {{Counter}}
+</div>
+<div>
+    <div>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores sit expedita repudiandae dolorem sapiente, eius
+        autem impedit dicta porro accusantium!
+    </div>
+    <button (click)="Increment()">Increment</button>
+    <button (click)="toggle()">Toggle Data</button>
+</div>
+<div [hidden]="hideData">
+    <app-child [toChild]="data$"></app-child>
+</div>
